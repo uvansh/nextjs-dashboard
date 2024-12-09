@@ -4,7 +4,10 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Metadata } from 'next';
  
 export const metadata: Metadata = {
-  title: 'Invoices | Acme Dashboard',
+  title: {
+    template:'%s | Acme Dashboard',
+    default:'Acme Dashboard',
+  },
   description: 'The official Next.js Course Dashboard, built with App Router.',
   metadataBase: new URL('https://next-learn-dashboard.vercel.sh'),
 };
